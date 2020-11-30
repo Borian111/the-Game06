@@ -4,10 +4,18 @@
 Загаданное число должно храниться «в замыкании»*/
 
 
+function theGame() {
 
-function game(x){    
+    //рандомайзер для числа из диапазона 1-100
+    function getRandomInt(min, max) {
+        return parseFloat(Math.floor(Math.random() * (max - min)) + min);
+      }
+
+
+    let x = getRandomInt(1, 100);
+function question(){    
     //спрашивает пользователя: "Угадай число от 1 до 100".
-    let y = prompt('Угадай число от 1 до 100');
+    let y=prompt('Угадай число от 1 до 100');
             
     //Проверка: число или нет        
             let eee = function start() {
@@ -23,10 +31,10 @@ function game(x){
 — если пользовательское число меньше, то бот выводит "Загаданное число больше" и предлагает ввести новый вариант;*/
                   } else if(y>x) {
                     alert('Загаданное число меньше');
-                    game(x);
+                    question();
                 } else if(y<x) {
                     alert('Загаданное число больше');
-                    game(x);
+                    question();
                              
 /*если пользовательское число равно загаданному,
  то игра заканчивается и выводит сообщение  "Поздравляю, Вы угадали!!!". */              
@@ -37,13 +45,15 @@ function game(x){
  и предлагает ввести новый вариант;*/            
                 } else if(!eee(y)) {
                     alert('Введи число!');
-                    game(x);    
+                    question();    
                
                     
 }
+}
+question(x)
 }   
     
- game(9);
+ theGame();
 
 
       
