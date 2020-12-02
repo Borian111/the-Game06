@@ -5,9 +5,9 @@
 
 
 
-
+function xxxGame(){
 function game(x, n){    
-    
+        
     function gameX(){
         n=n+1;
         let r=10-n;
@@ -41,7 +41,8 @@ function game(x, n){
  то игра заканчивается и выводит сообщение  "Поздравляю, Вы угадали!!!". */              
             } else if(y==x) {
                     alert('Поздравляю, Вы угадали!!! Хотели бы сыграть ещё?');
-                    gameX(); 
+                    
+                    xxxGame(); 
 /*если пользователь ввел не число, то выводит сообщение "Введи число!"
  и предлагает ввести новый вариант;*/            
                 } else if(!eee(y)) {
@@ -56,14 +57,14 @@ function game(x, n){
             
             
 }
+let x = function randomInteger(min, max) {
+       let rand = min + Math.random() * (max + 1 - min);
+    return Math.floor(rand);}
 
-
- let x = function getRandomFromRange(min, max) {
-    return Math.round(Math.random() * (max - min) + 1);
-  }
+ 
  game(x(1,100), 0);
-
-
+}
+xxxGame();
       
 
 
