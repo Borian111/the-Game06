@@ -1,14 +1,15 @@
 'use strict'
 
 function xxxGame(){
-function game(x, n){    
+       let n=0;
+function game(x){    
         
     function gameX(){//счётчик попыток
         n=n+1;
         let r=10-n;
         if (r===0) {
             alert('Попытки зкончились. хотите сыграть ещё?')
-            gameX();
+            xxxGame();
             }
         let y = prompt('Угадай число от 1 до 100');
         let eee = function start() {//Проверка: число или нет 
@@ -27,6 +28,7 @@ function game(x, n){
                    xxxGame(); 
                  } else if(!eee(y)) {
                    alert('Введи число!');
+                   n=n-1;
                    gameX();    
                  }
             } 
@@ -36,7 +38,7 @@ gameX();
 let x = function randomInteger(min, max) {
         let rand = min + Math.random() * (max + 1 - min);
         return Math.floor(rand);}
-game(x(1,100), 0);
+game(x(1,100));
 }
 xxxGame();
       
